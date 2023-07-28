@@ -12,8 +12,10 @@ with open(filename1, 'r') as file:
     center_x, center_y = map(float, file.readline().split())
     radius = float(file.readline())
 filename2 = sys.argv[2]
+arr=[]
 with open(filename2, 'r') as file:
     for line in file:
         point_x, point_y = map(float, line.split())
         position = point_position(center_x, center_y, radius, point_x, point_y)
-        print(position)
+        arr.append(position)
+print(" ".join(map(str, arr)))
