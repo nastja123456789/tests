@@ -9,7 +9,10 @@ def circular_array(n, m):
         if current_index==0:
             break
     return path
-
-n,m=map(int, input().split())
+# task1.py 5 4
+# 14253
+s=input()
+l=s.split(" ")
+n,m=int(l[1]),int(l[2])
 result = circular_array(n, m)
 print(''.join(map(str,result)))
